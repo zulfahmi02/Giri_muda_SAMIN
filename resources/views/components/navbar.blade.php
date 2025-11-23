@@ -105,7 +105,7 @@
         <!-- Mobile Menu with Glassmorphism -->
         <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t border-white/20 pt-4">
             <div class="flex flex-col space-y-3">
-                <a href="{{ route('home') }}" class="{{ Request::is('/') ? 'text-teal-500 font-semibold' : 'text-gray-800' }}">HOME</a>
+                <a href="{{ route('home') }}" class="{{ Request::is('/') ? 'text-teal-500 font-semibold' : 'text-gray-800' }}">BERANDA</a>
                 
                 <!-- Mobile Dropdown Tentang -->
                 <div>
