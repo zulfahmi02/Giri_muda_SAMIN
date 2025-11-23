@@ -293,6 +293,19 @@
             console.error('Photo Sphere Viewer error:', err);
             showError();
         });
+
+        // Click to fullscreen - when clicking on the panorama (not markers)
+        viewer.addEventListener('click', (data) => {
+            // Only trigger fullscreen if not clicking on a marker and not already in fullscreen
+            if (!data.data.marker && !document.fullscreenElement && !isTransitioning) {
+                const viewerElement = document.getElementById('viewer');
+                if (viewerElement && viewerElement.requestFullscreen) {
+                    viewerElement.requestFullscreen().catch(err => {
+                        console.log('Could not enter fullscreen:', err);
+                    });
+                }
+            }
+        });
     }
     
     // Load markers for current scene
