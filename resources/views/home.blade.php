@@ -20,9 +20,9 @@
 @section('content')
 
 <!-- Hero Section -->
-<section id="home" class="relative h-screen flex items-center justify-center" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1920') center/cover no-repeat;">
+<section id="home" class="relative h-screen flex items-center justify-center" style="background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('{{ asset('images/bg.webp') }}'); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <div class="text-center text-white px-6">
-        <h1 class="font-playfair text-6xl md:text-8xl font-black mb-6 tracking-wider">
+        <h1 class="font-poppins text-6xl md:text-8xl font-black mb-6 tracking-wider">
             PITUTUR SAMIN
         </h1>
         <p class="text-xl md:text-2xl mb-8 font-light tracking-wide">
@@ -43,7 +43,7 @@
             <!-- Card 1: Ajaran -->
             <a href="{{ route('detail.ajaran') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" alt="Ajaran Samin" class="w-full h-full object-cover">
+                    <img src="images/ajaran.jpg" alt="Ajaran Samin" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Ajaran</h3>
                         <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
@@ -56,7 +56,7 @@
             <!-- Card 2: Sejarah -->
             <a href="{{ route('detail.sejarah') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=600" alt="Sejarah Samin" class="w-full h-full object-cover">
+                    <img src="images/sejarah.jpg" alt="Sejarah Samin" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Sejarah</h3>
                         <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
@@ -69,7 +69,7 @@
             <!-- Card 3: Tokoh -->
             <a href="{{ route('detail.tokoh') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600" alt="Tokoh Samin" class="w-full h-full object-cover">
+                    <img src="images/tokoh.jpg" alt="Tokoh Samin" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Tokoh</h3>
                         <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
@@ -82,7 +82,7 @@
             <!-- Card 4: Kepercayaan -->
             <a href="{{ route('detail.kepercayaan') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600" alt="Kepercayaan Samin" class="w-full h-full object-cover">
+                    <img src="images/kepercayaan.jpg" alt="Kepercayaan Samin" class="w-full h-full object-cover">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Kepercayaan</h3>
                         <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">

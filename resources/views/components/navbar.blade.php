@@ -1,18 +1,18 @@
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/10 backdrop-blur-xl border-b border-white/20 shadow-lg">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-xl border-b border-white/20 shadow-lg">
     <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
             <!-- Logo -->
             <div class="flex items-center space-x-3">
                 <div class="w-12 h-12 bg-grey rounded-full flex items-center justify-center shadow-lg">
                     {{-- <i class="fas fa-mountain text-white text-xl"></i> --}}
-                    <img src="images/logo1.png" alt="">
+                    <img src="images/logo4.png" alt="">
                 </div>
                 <span class="text-xl font-bold text-gray-900">Suku Samin</span>
             </div>
             
             <!-- Desktop Menu -->
             <div class="hidden md:flex items-center space-x-8">
-                <a href="{{ route('home') }}" class="{{ Request::is('/') ? 'text-teal-500 font-semibold border-b-2 border-teal-500' : 'text-gray-800 hover:text-teal-500' }} transition">HOME</a>
+                <a href="{{ route('home') }}" class="{{ Request::is('/') ? 'text-teal-500 font-semibold border-b-2 border-teal-500' : 'text-gray-800 hover:text-teal-500' }} transition">BERANDA</a>
                 
                 <!-- Dropdown Tentang -->
                 <div class="relative group">
@@ -80,7 +80,7 @@
                 </div>
                 
                 <a href="{{ route('home') }}#narasi" class="text-gray-800 hover:text-teal-500 transition">NARASI</a>
-                <a href="{{ route('vr.index') }}" class="{{ Request::is('vr*') ? 'text-teal-500 font-semibold border-b-2 border-teal-500' : 'text-gray-800 hover:text-teal-500' }} transition">VR 360°</a>
+                {{-- <a href="{{ route('vr.index') }}" class="{{ Request::is('vr*') ? 'text-teal-500 font-semibold border-b-2 border-teal-500' : 'text-gray-800 hover:text-teal-500' }} transition">VR 360°</a> --}}
             </div>
             
             <!-- Right Icons -->
@@ -88,11 +88,11 @@
                 <button id="searchBtn" class="text-gray-800 hover:text-teal-500 transition">
                     <i class="fas fa-search text-lg"></i>
                 </button>
-                <button class="text-gray-800 hover:text-teal-500 transition">
+                {{-- <button class="text-gray-800 hover:text-teal-500 transition">
                     <i class="fas fa-user text-lg"></i>
-                </button>
+                </button> --}}
                 <a href="{{ route('vr.index') }}" class="px-6 py-2 bg-gradient-to-r from-teal-500 to-cyan-500 text-white rounded-lg hover:shadow-xl hover:scale-105 transition-all font-medium">
-                    Explore Now
+                    VR 360°
                 </a>
             </div>
             

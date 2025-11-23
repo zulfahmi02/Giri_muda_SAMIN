@@ -13,7 +13,7 @@
 </div>
 
 <!-- Hero Section -->
-<section class="relative h-[60vh] flex items-center justify-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1528459801416-a9e53bbf4e17?w=1920') center/cover no-repeat;">
+<section class="relative h-[60vh] flex items-center justify-center" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{{ asset('images/sejarah-sub.jpg') }}') center/cover no-repeat;">
     <div class="text-center text-white px-6">
         <h1 class="font-playfair text-6xl md:text-8xl font-black mb-6 tracking-wider">
             SEJARAH SAMIN
