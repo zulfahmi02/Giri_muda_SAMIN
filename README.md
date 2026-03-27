@@ -1,59 +1,170 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Suku Samin
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website budaya Suku Samin berbasis Laravel 13 dengan halaman profil, narasi budaya, dan galeri panorama `VR 360°`.
 
-## About Laravel
+## Ringkasan
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project ini menampilkan:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- halaman beranda dengan pengenalan budaya Suku Samin
+- halaman detail untuk `Ajaran`, `Sejarah`, `Tokoh`, dan `Kepercayaan`
+- galeri `VR 360°`
+- viewer panorama interaktif berbasis Photo Sphere Viewer
+- pencarian konten dari navbar
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Stack
 
-## Learning Laravel
+- PHP `^8.3`
+- Laravel `^13.0`
+- Vite `^8`
+- Tailwind CSS `^4`
+- Photo Sphere Viewer `^5.14`
+- Three.js `^0.183`
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Fitur Utama
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- UI publik dengan tema glassmorphism
+- viewer panorama 360 dengan marker navigasi antar scene
+- fallback error saat panorama gagal dimuat
+- asset frontend dibundle lewat Vite
+- security headers dasar di level aplikasi
+- session driver database dengan migration tersimpan di repo
 
-## Laravel Sponsors
+## Route Utama
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+- `/` : beranda
+- `/detail/ajaran`
+- `/detail/sejarah`
+- `/detail/tokoh`
+- `/detail/kepercayaan`
+- `/vr` : galeri panorama
+- `/vr/{scene}` : halaman viewer panorama
 
-### Premium Partners
+## Scene VR
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+Scene yang saat ini dikenali aplikasi ada di `app/Http/Controllers/VRController.php`:
 
-## Contributing
+- `rumah-tradisional`
+- `ladang-pertanian`
+- `upacara-adat`
+- `kehidupan-sehari`
+- `kerajinan-tangan`
+- `pemandangan-alam`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Catatan:
+- asset panorama utama saat ini disimpan di `public/images/360`
+- thumbnail galeri VR disimpan di `public/images/360/thumbnails`
+- jika menambah scene baru, pastikan whitelist controller, thumbnail, dan file panorama ikut ditambahkan
 
-## Code of Conduct
+## Kebutuhan Sistem
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- PHP `8.3+`
+- Composer
+- Node.js `20+`
+- npm
+- database MySQL atau SQLite
 
-## Security Vulnerabilities
+## Instalasi Lokal
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+1. Install dependency backend dan frontend:
 
-## License
+```bash
+composer install
+npm install
+```
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+2. Buat file environment:
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+3. Atur koneksi database di `.env`.
+
+4. Jalankan migration:
+
+```bash
+php artisan migrate
+```
+
+5. Jalankan development server:
+
+```bash
+composer run dev
+```
+
+Atau jalankan manual:
+
+```bash
+php artisan serve
+npm run dev
+```
+
+## Perintah Penting
+
+Build asset production:
+
+```bash
+npm run build
+```
+
+Menjalankan test:
+
+```bash
+php artisan test
+```
+
+Menjalankan formatter Laravel Pint:
+
+```bash
+./vendor/bin/pint
+```
+
+Setup cepat dari awal:
+
+```bash
+composer run setup
+```
+
+## Struktur Penting
+
+- `routes/web.php` : route publik
+- `app/Http/Controllers` : controller halaman
+- `resources/views` : Blade view
+- `resources/js/app.js` : interaksi navbar dan modal pencarian
+- `resources/js/vr-viewer.js` : logic viewer panorama
+- `resources/css/app.css` : styling global
+- `resources/css/vr.css` : styling viewer VR
+- `app/Http/Middleware/SecurityHeaders.php` : hardening response headers
+
+## Catatan Deploy
+
+Untuk deploy production, perhatikan hal berikut:
+
+- jalankan `npm run build`
+- set `APP_ENV=production`
+- set `APP_DEBUG=false`
+- pastikan `php artisan migrate --force` dijalankan
+- idealnya asset panorama 360 dipindah ke object storage / CDN agar app server tidak melayani file besar langsung
+- jika memakai domain production, sesuaikan `APP_URL`
+
+## Optimasi Asset 360
+
+Asset panorama saat ini sudah dikompresi agar lebih ringan untuk web. Meski begitu, untuk trafik lebih tinggi saya sarankan:
+
+- simpan panorama di object storage seperti Cloudflare R2 / S3-compatible storage
+- aktifkan cache header panjang untuk file gambar
+- pertimbangkan tiled panorama jika jumlah scene atau trafik bertambah
+
+## Testing
+
+Test yang tersedia saat ini mencakup:
+
+- response halaman utama
+- security headers publik
+- validasi bahwa halaman publik tidak lagi memakai CDN legacy untuk asset utama
+
+## Lisensi
+
+Project ini mengikuti lisensi `MIT`, mengikuti basis project Laravel.
