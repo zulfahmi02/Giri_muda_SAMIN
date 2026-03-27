@@ -2,21 +2,6 @@
 
 @section('title', 'Suku Samin - Budaya Bojonegoro')
 
-@section('styles')
-<style>
-    .hero-overlay {
-        background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4));
-    }
-    .card-hover {
-        transition: all 0.3s ease;
-    }
-    .card-hover:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-    }
-</style>
-@endsection
-
 @section('content')
 
 <!-- Hero Section -->
@@ -43,12 +28,12 @@
             <!-- Card 1: Ajaran -->
             <a href="{{ route('detail.ajaran') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="images/ajaran.jpg" alt="Ajaran Samin" class="w-full h-full object-cover">
+                    <img src="{{ asset('images/ajaran.jpg') }}" alt="Ajaran Samin" class="w-full h-full object-cover" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Ajaran</h3>
-                        <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
+                        <span class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
                             Selengkapnya
-                        </button>
+                        </span>
                     </div>
                 </div>
             </a>
@@ -56,12 +41,12 @@
             <!-- Card 2: Sejarah -->
             <a href="{{ route('detail.sejarah') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="images/sejarah.jpg" alt="Sejarah Samin" class="w-full h-full object-cover">
+                    <img src="{{ asset('images/sejarah.jpg') }}" alt="Sejarah Samin" class="w-full h-full object-cover" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Sejarah</h3>
-                        <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
+                        <span class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
                             Selengkapnya
-                        </button>
+                        </span>
                     </div>
                 </div>
             </a>
@@ -69,12 +54,12 @@
             <!-- Card 3: Tokoh -->
             <a href="{{ route('detail.tokoh') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="images/tokoh.jpg" alt="Tokoh Samin" class="w-full h-full object-cover">
+                    <img src="{{ asset('images/tokoh.jpg') }}" alt="Tokoh Samin" class="w-full h-full object-cover" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Tokoh</h3>
-                        <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
+                        <span class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
                             Selengkapnya
-                        </button>
+                        </span>
                     </div>
                 </div>
             </a>
@@ -82,12 +67,12 @@
             <!-- Card 4: Kepercayaan -->
             <a href="{{ route('detail.kepercayaan') }}" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg block">
                 <div class="relative h-80">
-                    <img src="images/kepercayaan.jpg" alt="Kepercayaan Samin" class="w-full h-full object-cover">
+                    <img src="{{ asset('images/kepercayaan.jpg') }}" alt="Kepercayaan Samin" class="w-full h-full object-cover" loading="lazy">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex flex-col justify-end p-6">
                         <h3 class="text-white text-3xl font-bold mb-2">Kepercayaan</h3>
-                        <button class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
+                        <span class="bg-gray-700/80 text-white px-4 py-2 rounded-lg w-fit text-sm hover:bg-gray-600 transition">
                             Selengkapnya
-                        </button>
+                        </span>
                     </div>
                 </div>
             </a>

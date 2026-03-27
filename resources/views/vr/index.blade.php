@@ -17,9 +17,10 @@
             <!-- VR Card 1 -->
             <a href="{{ route('vr.view', 'rumah-tradisional') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600" 
+                    <img src="{{ asset('images/360/thumbnails/rumah-tradisional.jpg') }}"
                          alt="Rumah Tradisional Samin" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -39,9 +40,10 @@
             <!-- VR Card 2 -->
             <a href="{{ route('vr.view', 'ladang-pertanian') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=600" 
+                    <img src="{{ asset('images/360/thumbnails/ladang-pertanian.jpg') }}"
                          alt="Ladang Suku Samin" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -61,9 +63,10 @@
             <!-- VR Card 3 -->
             <a href="{{ route('vr.view', 'upacara-adat') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600" 
+                    <img src="{{ asset('images/360/thumbnails/upacara-adat.jpg') }}"
                          alt="Upacara Adat Samin" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -83,9 +86,10 @@
             <!-- VR Card 4 -->
             <a href="{{ route('vr.view', 'kehidupan-sehari') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1533038590840-1cde6e668a91?w=600" 
+                    <img src="{{ asset('images/360/thumbnails/kehidupan-sehari.jpg') }}"
                          alt="Kehidupan Sehari-hari" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -105,9 +109,10 @@
             <!-- VR Card 5 -->
             <a href="{{ route('vr.view', 'kerajinan-tangan') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1519904981063-b0cf448d479e?w=600" 
+                    <img src="{{ asset('images/360/thumbnails/kerajinan-tangan.jpg') }}"
                          alt="Kerajinan Tangan" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -127,9 +132,10 @@
             <!-- VR Card 6 -->
             <a href="{{ route('vr.view', 'pemandangan-alam') }}" class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group block">
                 <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1501594907352-04cda38ebc29?w=600" 
+                    <img src="{{ asset('images/bg.webp') }}"
                          alt="Pemandangan Alam" 
-                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                         class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                         loading="lazy">
                     <div class="absolute inset-0 bg-black/40 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                         <div class="bg-white/90 backdrop-blur-sm rounded-full p-6 group-hover:scale-110 transition-transform duration-300">
                             <i class="fas fa-vr-cardboard text-4xl text-teal-500"></i>
@@ -164,7 +170,7 @@
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check-circle mt-1"></i>
-                        <span>Drag & klik pada layar untuk melihat ke segala arah</span>
+                        <span>Geser atau drag pada layar untuk melihat ke segala arah</span>
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check-circle mt-1"></i>
@@ -172,7 +178,7 @@
                     </li>
                     <li class="flex items-start space-x-3">
                         <i class="fas fa-check-circle mt-1"></i>
-                        <span>Untuk mobile: gunakan gyroscope dengan menggerakkan ponsel Anda</span>
+                        <span>Untuk mobile: geser dengan satu jari dan cubit layar untuk zoom</span>
                     </li>
                 </ul>
             </div>
